@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Digital Hub</title>
+  <meta name="description" content="K Digital Hub - Professional digital services including web design, branding, posters, logos, and content creation.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #f4f6f8;
+      color: #202020;
+      font-size: 0.95rem;
+    }
+
+    :root {
+      --primary: #0b5e34;
+      --primary-light: #11a85d;
+      --dark: #000000;
+      --gold: #d4af37;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--dark), var(--primary));
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: var(--dark);
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      gap: 20px;
+      z-index: 1000;
+      text-transform: uppercase;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding-bottom: 4px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary-light);
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    section {
+      background: #ffffff;
+      padding: 40px 20px;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .services-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .service-card {
+      background-color: #e9f7ef;
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 6px solid var(--primary);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    .service-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .toggle-info {
+      cursor: pointer;
+      color: var(--primary);
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    .toggle-info:hover { color: var(--primary-light); }
+    .hidden-info {
+      display: none;
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    .rating span {
+      font-size: 0.85rem;
+      color: gold;
+    }
+
+    input, textarea {
+      width: 90%;
+      max-width: 400px;
+      padding: 12px;
+      margin: 10px auto;
+      border-radius: 8px;
+      border: 1px solid #999;
+      display: block;
+      font-size: 0.9rem;
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 0.9rem;
+    }
+    button:hover { background-color: var(--primary-light); }
+
+    footer {
+      background-color: var(--dark);
+      color: #ececec;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--gold);
+      margin: 0 10px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background-color: #25D366;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 9999;
+    }
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://wa.me/0752007054" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <nav>
+    <a href="#about">Home</a>
+    <a href="#services">Services</a>
+    <a href="#faq">FAQ</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="about">
+    <h1>K Digital Hub</h1>
+    <p>Your trusted digital services partner</p>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service-card"><h3>Posters & Logos</h3><p>High‑quality and creative branding.</p></div>
+        <div class="service-card"><h3>Typing Services</h3><p>Fast, accurate, and professional document typing.</p></div>
+        <div class="service-card"><h3>Website Creation</h3><p>Beautiful, responsive and modern websites.</p></div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <p><strong>What experience do you have?</strong><br>We have years of experience in digital design, branding, and web development.</p>
+      <p><strong>What is your process?</strong><br>Consultation → Design → Development → Review → Final Delivery.</p>
+      <p><strong>What if I don't like it?</strong><br>Yes, you can request revisions until you're satisfied.</p>
+      <p><strong>How will we communicate?</strong><br>Communication is done via WhatsApp, email, or direct call.</p>
+      <p><strong>How long will it take?</strong><br>1–4 weeks depending on project size.</p>
+      <p><strong>What must I provide?</strong><br>Content, logos, requirements, and any references.</p>
+      <p><strong>What tools do you use?</strong><br>We use clean HTML, CSS, JavaScript, and design tools like Canva/Figma.</p>
+    </section>
+
+    <section id="reviews">
+      <h2>Ratings & Reviews</h2>
+      <div class="rating"><span>★★★★★</span><p>Outstanding service!</p></div>
+      <div class="rating"><span>★★★★★</span><p>Perfect logo designs!</p></div>
+      <div class="rating"><span>★★★★☆</span><p>Fast communication and professional.</p></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+
+      <span class="toggle-info">Email</span>
+      <p class="hidden-info">khutsopietsemenya</p>
+
+      <span class="toggle-info">Phone</span>
+      <p class="hidden-info">0752007054</p>
+
+      <span class="toggle-info">Address</span>
+      <p class="hidden-info">Polokwane Mankweng 0727, Limpopo, South Africa</p>
+
+      <form id="detailsForm" action="mailto:khutsopietsemenya" method="post">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Message" rows="5" required></textarea>
+        <label><input type="checkbox" required> I'm not a robot (reCAPTCHA)</label>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://facebook.com/khutso.semenya" target="_blank">Facebook</a>
+    <a href="https://instagram.com/k.khutso291" target="_blank">Instagram</a>
+    <p>Polokwane Mankweng 0727, Limpopo, South Africa</p>
+    <p>&copy; 2026 K Digital Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.toggle-info').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const info = toggle.nextElementSibling;
+        info.style.display = info.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
