@@ -6,24 +6,22 @@
 <title>K Digital Hub | Professional Digital Services</title>
 <meta name="description" content="Professional web design, branding, and digital solutions for modern businesses.">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- AOS Scroll Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
-
-body {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #f3f6f9, #e6edf3);
-  color: #1e293b;
-  line-height: 1.6;
 }
 
-/* Brand Colors */
+/* Colors */
 :root {
   --primary: #0b5e34;
   --primary-light: #18c77a;
@@ -32,13 +30,19 @@ body {
   --gray: #64748b;
 }
 
-/* ================= NAVIGATION ================= */
+/* Body */
+body {
+  background: linear-gradient(135deg, #f3f6f9, #e6edf3);
+  color: #1e293b;
+  line-height: 1.6;
+}
 
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
   width: 100%;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   z-index: 1000;
 }
@@ -75,176 +79,128 @@ body {
   color: var(--primary);
 }
 
-/* ================= SECTIONS ================= */
-
-section {
-  padding: 100px 20px;
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+@media(max-width:768px){
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    background:#fff;
+    position:absolute;
+    top:70px;
+    right:20px;
+    width:200px;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  }
+  .nav-links.active{display:flex;}
+  .hamburger{display:flex;}
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
+/* Sections */
+section { padding: 100px 20px; }
+.container { max-width: 1100px; margin:auto; }
 
 /* Hero */
-.hero {
-  text-align: center;
-  padding: 140px 20px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: var(--gray);
-  max-width: 750px;
-  margin: auto;
-}
+.hero { text-align:center; padding:140px 20px; }
+.hero h1 { font-size:3rem; font-weight:800; margin-bottom:20px; }
+.hero p { font-size:1.2rem; color:var(--gray); max-width:750px; margin:auto; }
+.hero strong{color:var(--primary); font-weight:600;}
 
 /* Buttons */
 .btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 30px;
-  border-radius: 8px;
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 30px;
+  border-radius:8px;
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s ease;
 }
+.btn:hover { opacity:0.9; transform:translateY(-2px); }
 
-.btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-/* Services */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
+/* Cards */
+.services { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; }
 .service-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
+  background:#fff;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  transition:0.4s ease;
 }
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-}
-
-.service-card h3 {
-  margin-bottom: 15px;
-  color: var(--primary);
-}
-
-.service-card p {
-  color: var(--gray);
-}
+.service-card:hover { transform: translateY(-8px) scale(1.02); box-shadow:0 20px 50px rgba(0,0,0,0.15);}
+.service-card h3{ margin-bottom:15px; color: var(--primary);}
+.service-card p{ color: var(--gray);}
+.service-card img{ margin-bottom:15px; border-radius:10px;}
 
 /* Reviews */
-.reviews {
-  display: grid;
-  gap: 25px;
-}
-
+.reviews { display:grid; gap:25px; }
 .review-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
-
-.stars {
-  color: var(--gold);
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
+.stars { color:var(--gold); font-size:1.2rem; margin-bottom:10px;}
 
 /* Contact */
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  border: 1px solid #cbd5e1;
-  font-family: inherit;
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  font-family:inherit;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--primary);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(11,94,52,0.15);
+  border-color:var(--primary);
+  outline:none;
+  box-shadow:0 0 0 3px rgba(11,94,52,0.15);
 }
 
 /* Footer */
-footer {
-  background: var(--dark);
-  color: #cbd5e1;
-  text-align: center;
-  padding: 40px 20px;
-}
+footer { background: var(--dark); color:#cbd5e1; text-align:center; padding:40px 20px; }
+footer a { color:var(--gold); text-decoration:none; margin:0 10px; }
+footer a:hover { opacity:0.8; }
 
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-footer a:hover {
-  opacity: 0.8;
-}
-
-/* ================= WHATSAPP BUTTON ================= */
-
+/* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  width: 60px;
-  height: 60px;
+  width:60px;
+  height:60px;
   background-color: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  z-index: 1000;
-  transition: 0.3s ease;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 25px rgba(0,0,0,0.2);
+  z-index:1000;
+  transition:0.3s ease;
 }
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
-}
+.whatsapp-float:hover { transform:scale(1.1); box-shadow:0 10px 30px rgba(0,0,0,0.3);}
+.whatsapp-float img { width:32px; height:32px; }
 
 /* Responsive */
-@media(max-width: 768px) {
-  .nav-links {
-    gap: 15px;
-    font-size: 0.9rem;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+@media(max-width:768px){
+  .nav-links{ gap:15px; font-size:0.9rem; }
+  .hero h1{ font-size:2.2rem; }
 }
 </style>
 </head>
@@ -259,28 +215,36 @@ footer a:hover {
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<section id="home" class="hero" data-aos="fade-up">
   <div class="container">
     <h1>K Digital Hub</h1>
     <p>
       We help businesses build powerful digital identities.
       From strategic branding to professional web development,
       we create modern solutions that elevate your brand and drive real growth.
+      <br><br>
+      <strong>Prices are negotiated depending on the project requirements.</strong>
     </p>
     <a href="#contact" class="btn">Get Started</a>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" data-aos="fade-up">
   <div class="container">
     <h2 style="text-align:center; margin-bottom:50px;">Our Services</h2>
     <div class="services">
@@ -288,12 +252,10 @@ footer a:hover {
         <h3>Posters & Logo Design</h3>
         <p>Strategic branding and visually compelling designs that position your business with clarity and impact.</p>
       </div>
-
       <div class="service-card">
         <h3>Typing Services</h3>
         <p>Accurate, fast, and professionally formatted documents tailored for business and academic excellence.</p>
       </div>
-
       <div class="service-card">
         <h3>Website Development</h3>
         <p>Modern, responsive, and conversion-focused websites designed to grow your online presence.</p>
@@ -302,22 +264,43 @@ footer a:hover {
   </div>
 </section>
 
+<!-- PORTFOLIO -->
+<section id="portfolio" data-aos="fade-up">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:50px;">Our Work</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="https://via.placeholder.com/400x250" alt="Project">
+        <h3>Restaurant Website</h3>
+        <p>Modern responsive website built for a local restaurant brand.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://via.placeholder.com/400x250" alt="Project">
+        <h3>Business Branding</h3>
+        <p>Complete branding package including logo and marketing designs.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://via.placeholder.com/400x250" alt="Project">
+        <h3>E-commerce Website</h3>
+        <p>Online store developed to sell products and grow business sales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- REVIEWS -->
-<section id="reviews">
+<section id="reviews" data-aos="fade-up">
   <div class="container">
     <h2 style="text-align:center; margin-bottom:40px;">Client Reviews</h2>
-
     <div class="reviews">
       <div class="review-card">
         <div class="stars">★★★★★</div>
         <p>Outstanding service and highly professional delivery.</p>
       </div>
-
       <div class="review-card">
         <div class="stars">★★★★★</div>
         <p>Excellent branding work. Highly recommended.</p>
       </div>
-
       <div class="review-card">
         <div class="stars">★★★★☆</div>
         <p>Fast communication and great attention to detail.</p>
@@ -327,11 +310,10 @@ footer a:hover {
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" data-aos="fade-up">
   <div class="container">
     <h2 style="text-align:center; margin-bottom:40px;">Contact Us</h2>
-
-    <form class="contact-form">
+    <form class="contact-form" id="contactForm">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea rows="5" placeholder="Your Message" required></textarea>
@@ -341,23 +323,44 @@ footer a:hover {
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer data-aos="fade-up">
+  <h3>K Digital Hub</h3>
+  <p>Professional digital solutions for modern businesses.</p>
   <p>Polokwane Mankweng 0727, Limpopo, South Africa</p>
-  <p>
-    <a href="#">Facebook</a> |
-    <a href="#">Instagram</a>
-  </p>
-  <p>&copy; 2026 K Digital Hub. All rights reserved.</p>
+  <div style="margin-top:15px;">
+    <a href="https://www.facebook.com/share/19rgVvwt4y/" target="_blank">Facebook</a> |
+    <a href="https://www.instagram.com/k.khutso2911?igsh=bzR5Y3Q0bDVvMWtq" target="_blank">Instagram</a> |
+    <a href="https://wa.me/27752007054" target="_blank">WhatsApp</a>
+  </div>
+  <p style="margin-top:20px;">© 2026 K Digital Hub. All rights reserved.</p>
 </footer>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/27752007054" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-        alt="WhatsApp">
+<a href="https://wa.me/27752007054" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:800, once:true});
+
+// Hamburger toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Contact form WhatsApp
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  let name = this.querySelector('input[type=text]').value;
+  let email = this.querySelector('input[type=email]').value;
+  let message = this.querySelector('textarea').value;
+  let url = `https://wa.me/27752007054?text=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
+  window.open(url,'_blank');
+});
+</script>
 </body>
 </html>
