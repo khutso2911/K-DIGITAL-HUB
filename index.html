@@ -3,24 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>K Digital Hub | Digital Experiences That Move Business</title>
-
 <meta name="description" content="K Digital Hub creates modern websites, branding, digital designs and professional business solutions in South Africa.">
-
 <meta name="theme-color" content="#071a12">
 
-<!-- Google Fonts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-<!-- Font Awesome - Real WhatsApp, Facebook & Instagram Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 <style>
-
 :root{
   --green:#0b5e34;
   --green2:#16a765;
@@ -33,2197 +25,371 @@
   --line:#e5ece8;
   --shadow:0 24px 70px rgba(8,18,14,.10);
 }
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Inter,Arial,sans-serif;
-  color:var(--ink);
-  background:#fff;
-  line-height:1.65;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  width:min(1160px,92%);
-  margin:auto;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,.88);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(229,236,232,.8);
-}
-
-.nav{
-  height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  font-family:Montserrat,sans-serif;
-  font-weight:800;
-  font-size:1.18rem;
-  color:var(--green);
-}
-
-.logo span{
-  color:var(--gold);
-}
-
-.navlinks{
-  display:flex;
-  gap:28px;
-  list-style:none;
-  font-weight:600;
-  font-size:.93rem;
-}
-
-.navlinks a{
-  transition:.25s;
-}
-
-.navlinks a:hover{
-  color:var(--green2);
-}
-
-.menu{
-  display:none;
-  border:0;
-  background:none;
-  font-size:1.7rem;
-  color:var(--green);
-  cursor:pointer;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  padding:13px 20px;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--green),var(--green2));
-  color:white;
-  font-weight:800;
-  border:0;
-  cursor:pointer;
-  box-shadow:0 12px 30px rgba(11,94,52,.22);
-  transition:.25s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-.btn.alt{
-  background:white;
-  color:var(--green);
-  border:1px solid var(--line);
-  box-shadow:none;
-}
-
-/* =========================
-   GENERAL
-========================= */
-
-.section{
-  padding:92px 0;
-}
-
-.eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  color:var(--green);
-  font-size:.78rem;
-  font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-.dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#19c46b;
-  box-shadow:0 0 0 6px rgba(25,196,107,.12);
-}
-
-h1,
-h2,
-h3{
-  font-family:Montserrat,Inter,sans-serif;
-  line-height:1.15;
-}
-
-h2{
-  font-size:clamp(2rem,4vw,3rem);
-  margin:12px 0 16px;
-}
-
-.lead{
-  color:var(--muted);
-  max-width:690px;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  position:relative;
-  overflow:hidden;
-
-  background:
-  radial-gradient(
-    circle at 85% 18%,
-    rgba(57,217,138,.22),
-    transparent 28%
-  ),
-  linear-gradient(
-    135deg,
-    #f5faf7,
-    #edf5f1
-  );
-
-  padding:82px 0 74px;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:55px;
-  align-items:center;
-}
-
-.hero h1{
-  font-size:clamp(2.8rem,6vw,5.3rem);
-  letter-spacing:-.055em;
-  margin:16px 0;
-}
-
-.hero h1 span{
-  color:var(--green);
-}
-
-.hero .lead{
-  font-size:1.08rem;
-}
-
-.actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:28px;
-}
-
-.hero-card{
-  position:relative;
-  border-radius:28px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  min-height:500px;
-}
-
-.hero-card img{
-  width:100%;
-  height:500px;
-  object-fit:cover;
-}
-
-.hero-overlay{
-  position:absolute;
-  left:18px;
-  right:18px;
-  bottom:18px;
-  padding:17px;
-  border-radius:18px;
-  background:rgba(7,26,18,.82);
-  color:white;
-  backdrop-filter:blur(10px);
-}
-
-.hero-overlay strong{
-  display:block;
-  margin-bottom:3px;
-}
-
-.live-pill{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  color:#dfffee;
-  font-size:.8rem;
-  font-weight:700;
-}
-
-.live-pill i{
-  width:7px;
-  height:7px;
-  background:#35ef8c;
-  border-radius:50%;
-  box-shadow:0 0 12px #35ef8c;
-}
-
-/* =========================
-   TRUST BAR
-========================= */
-
-.trust{
-  padding:20px 0;
-  background:#071a12;
-  color:#d9e8e1;
-}
-
-.trust-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.stat strong{
-  display:block;
-  font-size:1.5rem;
-  color:white;
-}
-
-.stat span{
-  font-size:.82rem;
-  color:#9bb2a7;
-}
-
-/* =========================
-   SECTION HEAD
-========================= */
-
-.section-head{
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  align-items:end;
-  margin-bottom:38px;
-}
-
-/* =========================
-   SERVICES
-========================= */
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.card{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:28px;
-  box-shadow:0 12px 35px rgba(8,18,14,.05);
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-7px);
-  box-shadow:var(--shadow);
-}
-
-.icon{
-  width:48px;
-  height:48px;
-  border-radius:14px;
-  background:#e8f7ef;
-  color:var(--green);
-  display:grid;
-  place-items:center;
-  font-size:1.35rem;
-  margin-bottom:20px;
-}
-
-.card h3{
-  margin-bottom:10px;
-}
-
-.card p{
-  color:var(--muted);
-  font-size:.94rem;
-}
-
-/* =========================
-   PORTFOLIO
-========================= */
-
-.portfolio{
-  background:var(--soft);
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.work{
-  position:relative;
-  overflow:hidden;
-  border-radius:20px;
-  min-height:300px;
-  background:#ddd;
-}
-
-.work img{
-  width:100%;
-  height:330px;
-  object-fit:cover;
-  transition:.5s;
-}
-
-.work:hover img{
-  transform:scale(1.06);
-}
-
-.work-info{
-  position:absolute;
-  left:14px;
-  right:14px;
-  bottom:14px;
-  padding:15px;
-  border-radius:15px;
-  background:rgba(7,26,18,.86);
-  color:white;
-  backdrop-filter:blur(10px);
-}
-
-.work-info small{
-  color:#a9c4b7;
-}
-
-/* =========================
-   LIVE SECTION
-========================= */
-
-.live-section{
-  background:#071a12;
-  color:white;
-}
-
-.live-layout{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:45px;
-  align-items:start;
-}
-
-.live-section .lead{
-  color:#a9beb5;
-}
-
-.feed{
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:22px;
-  overflow:hidden;
-  background:rgba(255,255,255,.04);
-}
-
-.feed-top{
-  padding:17px 20px;
-  border-bottom:1px solid rgba(255,255,255,.1);
-  display:flex;
-  justify-content:space-between;
-}
-
-.feed-item{
-  display:flex;
-  gap:14px;
-  padding:18px 20px;
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.feed-item:last-child{
-  border-bottom:0;
-}
-
-.feed-avatar{
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#103f2a;
-  flex:none;
-}
-
-.feed-item p{
-  font-size:.9rem;
-  color:#dce9e3;
-}
-
-.feed-item small{
-  color:#8eaaa0;
-}
-
-.badge{
-  display:inline-flex;
-  padding:5px 9px;
-  border-radius:99px;
-  font-size:.7rem;
-  font-weight:800;
-  background:#123b29;
-  color:#62e99d;
-}
-
-/* =========================
-   PROCESS
-========================= */
-
-.process-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.step{
-  padding:24px;
-  border-top:3px solid var(--green);
-  background:#f8fbf9;
-  border-radius:0 0 18px 18px;
-}
-
-.step b{
-  color:var(--green);
-  font-size:.8rem;
-}
-
-/* =========================
-   REVIEWS
-========================= */
-
-.reviews{
-  background:#f7faf8;
-}
-
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.review{
-  background:white;
-  padding:26px;
-  border-radius:20px;
-  border:1px solid var(--line);
-}
-
-.stars{
-  color:var(--gold);
-  letter-spacing:3px;
-  margin-bottom:12px;
-}
-
-.review p{
-  color:#475569;
-}
-
-.reviewer{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-top:18px;
-  font-weight:800;
-  font-size:.9rem;
-}
-
-.avatar{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#0b5e34,#39d98a);
-  display:grid;
-  place-items:center;
-  color:white;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-  background:linear-gradient(135deg,#edf7f1,#f9fbfa);
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:40px;
-  align-items:start;
-}
-
-.contact-box{
-  background:#071a12;
-  color:white;
-  padding:32px;
-  border-radius:24px;
-  box-shadow:var(--shadow);
-}
-
-.contact-box p{
-  color:#a9beb5;
-  margin:10px 0 24px;
-}
-
-.contact-links{
-  display:grid;
-  gap:12px;
-}
-
-.contact-links a{
-  padding:14px;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:12px;
-  transition:.25s;
-}
-
-.contact-links a:hover{
-  background:rgba(255,255,255,.06);
-  transform:translateX(3px);
-}
-
-/* REAL SOCIAL ICONS */
-
-.contact-links i{
-  width:26px;
-  text-align:center;
-  font-size:1.25rem;
-  margin-right:7px;
-}
-
-.contact-links .fa-whatsapp{
-  color:#25D366;
-}
-
-.contact-links .fa-facebook-f{
-  color:#1877F2;
-}
-
-.contact-links .fa-instagram{
-  color:#E4405F;
-}
-
-form{
-  background:white;
-  padding:30px;
-  border-radius:24px;
-  box-shadow:var(--shadow);
-}
-
-label{
-  display:block;
-  font-size:.82rem;
-  font-weight:800;
-  margin:0 0 6px;
-}
-
-input,
-textarea,
-select{
-  width:100%;
-  padding:13px 14px;
-  border:1px solid #d7e1dc;
-  border-radius:12px;
-  margin-bottom:16px;
-  font:inherit;
-  outline:none;
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-  border-color:var(--green2);
-  box-shadow:0 0 0 4px rgba(22,167,101,.1);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:#050d09;
-  color:#a9beb5;
-  padding:42px 0;
-}
-
-.footer-grid{
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  align-items:center;
-}
-
-footer strong{
-  color:white;
-}
-
-.socials{
-  display:flex;
-  gap:15px;
-}
-
-.socials a:hover{
-  color:white;
-}
-
-/* =========================
-   FLOATING WHATSAPP
-========================= */
-
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#25D366;
-  color:white;
-  z-index:999;
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
-  transition:.3s;
-}
-
-.whatsapp i{
-  font-size:1.8rem;
-}
-
-.whatsapp:hover{
-  transform:scale(1.1);
-}
-
-/* =========================
-   TOAST
-========================= */
-
-.toast{
-  position:fixed;
-  left:50%;
-  bottom:25px;
-  transform:translate(-50%,30px);
-  background:#071a12;
-  color:white;
-  padding:13px 18px;
-  border-radius:12px;
-  opacity:0;
-  pointer-events:none;
-  transition:.3s;
-  z-index:2000;
-}
-
-.toast.show{
-  opacity:1;
-  transform:translate(-50%,0);
-}
-
-/* =========================
-   MOBILE
-========================= */
-
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(229,236,232,.8)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Montserrat,sans-serif;font-weight:800;font-size:1.18rem;color:var(--green)}
+.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:28px;list-style:none;font-weight:600;font-size:.93rem}
+.navlinks a{transition:.25s}
+.navlinks a:hover{color:var(--green2)}
+.menu{display:none;border:0;background:none;font-size:1.7rem;color:var(--green);cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--green2));color:white;font-weight:800;border:0;cursor:pointer;box-shadow:0 12px 30px rgba(11,94,52,.22);transition:.25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:white;color:var(--green);border:1px solid var(--line);box-shadow:none}
+.section{padding:92px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.dot{width:8px;height:8px;border-radius:50%;background:#19c46b;box-shadow:0 0 0 6px rgba(25,196,107,.12)}
+h1,h2,h3{font-family:Montserrat,Inter,sans-serif;line-height:1.15}
+h2{font-size:clamp(2rem,4vw,3rem);margin:12px 0 16px}
+.lead{color:var(--muted);max-width:690px}
+.hero{position:relative;overflow:hidden;background:
+ radial-gradient(circle at 85% 18%,rgba(57,217,138,.22),transparent 28%),
+ linear-gradient(135deg,#f5faf7,#edf5f1);padding:82px 0 74px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,6vw,5.3rem);letter-spacing:-.055em;margin:16px 0}
+.hero h1 span{color:var(--green)}
+.hero .lead{font-size:1.08rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-card{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);min-height:500px}
+.hero-card img{width:100%;height:500px;object-fit:cover}
+.hero-overlay{position:absolute;left:18px;right:18px;bottom:18px;padding:17px;border-radius:18px;background:rgba(7,26,18,.82);color:white;backdrop-filter:blur(10px)}
+.hero-overlay strong{display:block;margin-bottom:3px}
+.live-pill{display:inline-flex;align-items:center;gap:8px;color:#dfffee;font-size:.8rem;font-weight:700}
+.live-pill i{width:7px;height:7px;background:#35ef8c;border-radius:50%;box-shadow:0 0 12px #35ef8c}
+.trust{padding:20px 0;background:#071a12;color:#d9e8e1}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat strong{display:block;font-size:1.5rem;color:white}
+.stat span{font-size:.82rem;color:#9bb2a7}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 12px 35px rgba(8,18,14,.05);transition:.3s}
+.card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.icon{width:48px;height:48px;border-radius:14px;background:#e8f7ef;color:var(--green);display:grid;place-items:center;font-size:1.35rem;margin-bottom:20px}
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:.94rem}
+.portfolio{background:var(--soft)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.work{position:relative;overflow:hidden;border-radius:20px;min-height:300px;background:#ddd}
+.work img{width:100%;height:330px;object-fit:cover;transition:.5s}
+.work:hover img{transform:scale(1.06)}
+.work-info{position:absolute;left:14px;right:14px;bottom:14px;padding:15px;border-radius:15px;background:rgba(7,26,18,.86);color:white;backdrop-filter:blur(10px)}
+.work-info small{color:#a9c4b7}
+.live-section{background:#071a12;color:white}
+.live-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
+.live-section .lead{color:#a9beb5}
+.feed{border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.04)}
+.feed-top{padding:17px 20px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between}
+.feed-item{display:flex;gap:14px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.feed-item:last-child{border-bottom:0}
+.feed-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#103f2a;flex:none}
+.feed-item p{font-size:.9rem;color:#dce9e3}
+.feed-item small{color:#8eaaa0}
+.badge{display:inline-flex;padding:5px 9px;border-radius:99px;font-size:.7rem;font-weight:800;background:#123b29;color:#62e99d}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{padding:24px;border-top:3px solid var(--green);background:#f8fbf9;border-radius:0 0 18px 18px}
+.step b{color:var(--green);font-size:.8rem}
+.reviews{background:#f7faf8}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{background:white;padding:26px;border-radius:20px;border:1px solid var(--line)}
+.stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+.review p{color:#475569}
+.reviewer{display:flex;align-items:center;gap:10px;margin-top:18px;font-weight:800;font-size:.9rem}
+.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#0b5e34,#39d98a);display:grid;place-items:center;color:white}
+.contact{background:linear-gradient(135deg,#edf7f1,#f9fbfa)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.contact-box{background:#071a12;color:white;padding:32px;border-radius:24px;box-shadow:var(--shadow)}
+.contact-box p{color:#a9beb5;margin:10px 0 24px}
+.contact-links{display:grid;gap:12px}.contact-links i{width:24px;text-align:center;font-size:1.15rem;margin-right:6px}
+.contact-links a{padding:12px 14px;border:1px solid rgba(255,255,255,.12);border-radius:12px}
+form{background:white;padding:30px;border-radius:24px;box-shadow:var(--shadow)}
+label{display:block;font-size:.82rem;font-weight:800;margin:0 0 6px}
+input,textarea,select{width:100%;padding:13px 14px;border:1px solid #d7e1dc;border-radius:12px;margin-bottom:16px;font:inherit;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--green2);box-shadow:0 0 0 4px rgba(22,167,101,.1)}
+footer{background:#050d09;color:#a9beb5;padding:42px 0}
+.footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:center}
+footer strong{color:white}
+.socials{display:flex;gap:15px}
+.socials a:hover{color:white}
+.whatsapp i{font-size:1.7rem}.whatsapp{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:white;font-size:1.5rem;z-index:999;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,30px);background:#071a12;color:white;padding:13px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.3s;z-index:2000}
+.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:850px){
-
-  .navlinks{
-    display:none;
-    position:absolute;
-    top:76px;
-    left:4%;
-    right:4%;
-    background:white;
-    padding:18px;
-    border-radius:16px;
-    box-shadow:var(--shadow);
-    flex-direction:column;
-    gap:15px;
-  }
-
-  .navlinks.open{
-    display:flex;
-  }
-
-  .menu{
-    display:block;
-  }
-
-  .hero-grid,
-  .live-layout,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero-card,
-  .hero-card img{
-    min-height:380px;
-    height:380px;
-  }
-
-  .cards,
-  .gallery,
-  .review-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .process-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .trust-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .section-head{
-    display:block;
-  }
+ .navlinks{display:none;position:absolute;top:76px;left:4%;right:4%;background:white;padding:18px;border-radius:16px;box-shadow:var(--shadow);flex-direction:column;gap:15px}
+ .navlinks.open{display:flex}.menu{display:block}
+ .hero-grid,.live-layout,.contact-grid{grid-template-columns:1fr}
+ .hero-card,.hero-card img{min-height:380px;height:380px}
+ .cards,.gallery,.review-grid{grid-template-columns:1fr 1fr}
+ .process-grid{grid-template-columns:1fr 1fr}
+ .trust-grid{grid-template-columns:repeat(2,1fr)}
+ .section-head{display:block}
 }
-
 @media(max-width:560px){
-
-  .section{
-    padding:68px 0;
-  }
-
-  .hero{
-    padding:60px 0;
-  }
-
-  .hero h1{
-    font-size:2.8rem;
-  }
-
-  .cards,
-  .gallery,
-  .review-grid,
-  .process-grid{
-    grid-template-columns:1fr;
-  }
-
-  .trust-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .footer-grid{
-    display:block;
-  }
-
-  .socials{
-    margin-top:18px;
-  }
+ .section{padding:68px 0}.hero{padding:60px 0}.hero h1{font-size:2.8rem}
+ .cards,.gallery,.review-grid,.process-grid{grid-template-columns:1fr}
+ .trust-grid{grid-template-columns:1fr 1fr}.footer-grid{display:block}
+ .socials{margin-top:18px}
 }
-
 </style>
 </head>
 
 <body>
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
 <header class="navbar">
-
-<div class="container nav">
-
-<a class="logo" href="#home">
-K Digital <span>Hub</span>
-</a>
-
-<nav>
-
-<ul class="navlinks" id="navlinks">
-
-<li>
-<a href="#home">Home</a>
-</li>
-
-<li>
-<a href="#services">Services</a>
-</li>
-
-<li>
-<a href="#work">Our Work</a>
-</li>
-
-<li>
-<a href="#live">Live Updates</a>
-</li>
-
-<li>
-<a href="#contact">Contact</a>
-</li>
-
-</ul>
-
-</nav>
-
-<button
-class="menu"
-id="menu"
-aria-label="Open menu">
-☰
-</button>
-
-</div>
-
+  <div class="container nav">
+    <a class="logo" href="#home">K Digital <span>Hub</span></a>
+    <nav>
+      <ul class="navlinks" id="navlinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#live">Live Updates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu" id="menu" aria-label="Open menu">☰</button>
+  </div>
 </header>
 
-
 <main>
-
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero" id="home">
-
-<div class="container hero-grid">
-
-<div>
-
-<div class="eyebrow">
-
-<span class="dot"></span>
-
-Digital studio • South Africa
-
-</div>
-
-<h1>
-We build brands people
-<span>remember.</span>
-</h1>
-
-<p class="lead">
-
-K Digital Hub creates professional websites,
-visual identities, posters and digital solutions
-that make businesses look credible, modern
-and ready for growth.
-
-</p>
-
-<div class="actions">
-
-<a class="btn" href="#contact">
-Start a Project →
-</a>
-
-<a class="btn alt" href="#work">
-View Our Work
-</a>
-
-</div>
-
-<p style="margin-top:20px;font-size:.82rem;color:#71847b">
-
-Projects are quoted according to scope,
-features and delivery requirements.
-
-</p>
-
-</div>
-
-
-<div class="hero-card">
-
-<img
-src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
-alt="Creative team working together at a professional business meeting"
->
-
-<div class="hero-overlay">
-
-<div class="live-pill">
-
-<i></i>
-
-K Digital Hub — Live activity
-
-</div>
-
-<strong>
-Building the next digital experience.
-</strong>
-
-<span style="font-size:.8rem;color:#b9cec4">
-
-Web • Branding • Design • Business support
-
-</span>
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Digital studio • South Africa</div>
+      <h1>We build brands people <span>remember.</span></h1>
+      <p class="lead">K Digital Hub creates professional websites, visual identities, posters and digital solutions that make businesses look credible, modern and ready for growth.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Start a Project →</a>
+        <a class="btn alt" href="#work">View Our Work</a>
+      </div>
+      <p style="margin-top:20px;font-size:.82rem;color:#71847b">Projects are quoted according to scope, features and delivery requirements.</p>
+    </div>
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Creative team working together at a professional business meeting">
+      <div class="hero-overlay">
+        <div class="live-pill"><i></i> K Digital Hub — Live activity</div>
+        <strong>Building the next digital experience.</strong>
+        <span style="font-size:.8rem;color:#b9cec4">Web • Branding • Design • Business support</span>
+      </div>
+    </div>
+  </div>
 </section>
-
-
-<!-- =========================
-     TRUST
-========================= -->
 
 <section class="trust">
-
-<div class="container trust-grid">
-
-<div class="stat">
-
-<strong>Web</strong>
-
-<span>
-Responsive development
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>Brand</strong>
-
-<span>
-Professional visual identity
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>Design</strong>
-
-<span>
-Posters & digital graphics
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>Support</strong>
-
-<span>
-Fast client communication
-</span>
-
-</div>
-
-</div>
-
+  <div class="container trust-grid">
+    <div class="stat"><strong>Web</strong><span>Responsive development</span></div>
+    <div class="stat"><strong>Brand</strong><span>Professional visual identity</span></div>
+    <div class="stat"><strong>Design</strong><span>Posters & digital graphics</span></div>
+    <div class="stat"><strong>Support</strong><span>Fast client communication</span></div>
+  </div>
 </section>
-
-
-<!-- =========================
-     SERVICES
-========================= -->
 
 <section class="section" id="services">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-What we do
-</div>
-
-<h2>
-Digital services built around your goals.
-</h2>
-
-</div>
-
-<p class="lead">
-
-From your first idea to a finished online
-presence, we focus on clean design,
-useful functionality and a professional
-customer experience.
-
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<article class="card">
-
-<div class="icon">
-<i class="fa-solid fa-code"></i>
-</div>
-
-<h3>
-Website Development
-</h3>
-
-<p>
-
-Responsive business websites,
-landing pages and polished online
-experiences designed for phones,
-tablets and desktops.
-
-</p>
-
-</article>
-
-
-<article class="card">
-
-<div class="icon">
-<i class="fa-solid fa-pen-nib"></i>
-</div>
-
-<h3>
-Branding & Logos
-</h3>
-
-<p>
-
-Visual identities, logos, social
-graphics and brand materials that
-help your business look consistent
-and memorable.
-
-</p>
-
-</article>
-
-
-<article class="card">
-
-<div class="icon">
-<i class="fa-solid fa-image"></i>
-</div>
-
-<h3>
-Posters & Digital Design
-</h3>
-
-<p>
-
-Professional promotional artwork
-for launches, events, social media,
-campaigns and business communication.
-
-</p>
-
-</article>
-
-
-<article class="card">
-
-<div class="icon">
-<i class="fa-solid fa-keyboard"></i>
-</div>
-
-<h3>
-Typing & Documents
-</h3>
-
-<p>
-
-Accurate typing, formatting and
-professional document preparation
-for academic and business needs.
-
-</p>
-
-</article>
-
-
-<article class="card">
-
-<div class="icon">
-<i class="fa-solid fa-chart-line"></i>
-</div>
-
-<h3>
-Digital Business Setup
-</h3>
-
-<p>
-
-Practical help with online presence,
-contact channels and the digital
-foundations your business needs.
-
-</p>
-
-</article>
-
-
-<article class="card">
-
-<div class="icon">
-<i class="fa-solid fa-lightbulb"></i>
-</div>
-
-<h3>
-Custom Projects
-</h3>
-
-<p>
-
-Have something different in mind?
-Tell us what you need and we can
-discuss the scope, timeline and
-best solution.
-
-</p>
-
-</article>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">What we do</div><h2>Digital services built around your goals.</h2></div>
+      <p class="lead">From your first idea to a finished online presence, we focus on clean design, useful functionality and a professional customer experience.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">◈</div><h3>Website Development</h3><p>Responsive business websites, landing pages and polished online experiences designed for phones, tablets and desktops.</p></article>
+      <article class="card"><div class="icon">✦</div><h3>Branding & Logos</h3><p>Visual identities, logos, social graphics and brand materials that help your business look consistent and memorable.</p></article>
+      <article class="card"><div class="icon">▣</div><h3>Posters & Digital Design</h3><p>Professional promotional artwork for launches, events, social media, campaigns and business communication.</p></article>
+      <article class="card"><div class="icon">⌨</div><h3>Typing & Documents</h3><p>Accurate typing, formatting and professional document preparation for academic and business needs.</p></article>
+      <article class="card"><div class="icon">↗</div><h3>Digital Business Setup</h3><p>Practical help with online presence, contact channels and the digital foundations your business needs.</p></article>
+      <article class="card"><div class="icon">◎</div><h3>Custom Projects</h3><p>Have something different in mind? Tell us what you need and we can discuss the scope, timeline and best solution.</p></article>
+    </div>
+  </div>
 </section>
-
-
-<!-- =========================
-     PORTFOLIO
-========================= -->
 
 <section class="section portfolio" id="work">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-Selected work
-</div>
-
-<h2>
-Work that feels real.
-</h2>
-
-</div>
-
-<p class="lead">
-
-A visual showcase section you can
-replace with your actual completed
-client projects as your portfolio grows.
-
-</p>
-
-</div>
-
-
-<div class="gallery">
-
-
-<article class="work">
-
-<img
-src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85"
-alt="Business website analytics on laptop"
->
-
-<div class="work-info">
-
-<small>
-WEB DEVELOPMENT
-</small>
-
-<h3>
-Business Website
-</h3>
-
-</div>
-
-</article>
-
-
-<article class="work">
-
-<img
-src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=85"
-alt="Designer working on a digital interface"
->
-
-<div class="work-info">
-
-<small>
-UI / DIGITAL DESIGN
-</small>
-
-<h3>
-Modern Interface
-</h3>
-
-</div>
-
-</article>
-
-
-<article class="work">
-
-<img
-src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=85"
-alt="Team discussing a business project"
->
-
-<div class="work-info">
-
-<small>
-BUSINESS
-</small>
-
-<h3>
-Brand Strategy
-</h3>
-
-</div>
-
-</article>
-
-
-<article class="work">
-
-<img
-src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=85"
-alt="Creative team collaborating around a table"
->
-
-<div class="work-info">
-
-<small>
-CREATIVE
-</small>
-
-<h3>
-Campaign Planning
-</h3>
-
-</div>
-
-</article>
-
-
-<article class="work">
-
-<img
-src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=85"
-alt="Professional office workspace"
->
-
-<div class="work-info">
-
-<small>
-BRANDING
-</small>
-
-<h3>
-Digital Identity
-</h3>
-
-</div>
-
-</article>
-
-
-<article class="work">
-
-<img
-src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=85"
-alt="Professional team working in an office"
->
-
-<div class="work-info">
-
-<small>
-PROJECT DELIVERY
-</small>
-
-<h3>
-Client Experience
-</h3>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Selected work</div><h2>Work that feels real.</h2></div>
+      <p class="lead">A visual showcase section you can replace with your actual completed client projects as your portfolio grows.</p>
+    </div>
+    <div class="gallery">
+      <article class="work"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85" alt="Business website analytics on laptop"><div class="work-info"><small>WEB DEVELOPMENT</small><h3>Business Website</h3></div></article>
+      <article class="work"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=85" alt="Designer working on a digital interface"><div class="work-info"><small>UI / DIGITAL DESIGN</small><h3>Modern Interface</h3></div></article>
+      <article class="work"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=85" alt="Team discussing a business project"><div class="work-info"><small>BUSINESS</small><h3>Brand Strategy</h3></div></article>
+      <article class="work"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=85" alt="Creative team collaborating around a table"><div class="work-info"><small>CREATIVE</small><h3>Campaign Planning</h3></div></article>
+      <article class="work"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=85" alt="Professional office workspace"><div class="work-info"><small>BRANDING</small><h3>Digital Identity</h3></div></article>
+      <article class="work"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=85" alt="Professional team working in an office"><div class="work-info"><small>PROJECT DELIVERY</small><h3>Client Experience</h3></div></article>
+    </div>
+  </div>
 </section>
-
-
-<!-- =========================
-     LIVE FEED
-========================= -->
 
 <section class="section live-section" id="live">
-
-<div class="container live-layout">
-
-<div>
-
-<div
-class="eyebrow"
-style="color:#61e89b"
->
-
-<span class="dot"></span>
-
-Live updates
-
-</div>
-
-<h2 style="color:white">
-
-A website that feels active.
-
-</h2>
-
-<p class="lead">
-
-This live activity panel updates
-its timestamps automatically in
-the browser.
-
-When connected to a database or
-CMS later, it can become a genuine
-client/project feed.
-
-</p>
-
-<div class="actions">
-
-<a class="btn" href="#contact">
-Work With Us
-</a>
-
-</div>
-
-</div>
-
-
-<div class="feed">
-
-<div class="feed-top">
-
-<strong>
-Latest activity
-</strong>
-
-<span class="badge">
-● LIVE
-</span>
-
-</div>
-
-
-<div class="feed-item">
-
-<div class="feed-avatar">
-<i class="fa-solid fa-check"></i>
-</div>
-
-<div>
-
-<p>
-
-<strong>
-New project enquiry received
-</strong>
-
-<br>
-
-A business owner is interested
-in a professional website.
-
-</p>
-
-<small data-time>
-Just now
-</small>
-
-</div>
-
-</div>
-
-
-<div class="feed-item">
-
-<div class="feed-avatar">
-<i class="fa-solid fa-arrow-up-right-dots"></i>
-</div>
-
-<div>
-
-<p>
-
-<strong>
-Portfolio updated
-</strong>
-
-<br>
-
-New creative work has been
-added to the showcase.
-
-</p>
-
-<small data-time>
-Just now
-</small>
-
-</div>
-
-</div>
-
-
-<div class="feed-item">
-
-<div class="feed-avatar">
-<i class="fa-solid fa-wand-magic-sparkles"></i>
-</div>
-
-<div>
-
-<p>
-
-<strong>
-Design in progress
-</strong>
-
-<br>
-
-A new digital identity is currently
-being developed.
-
-</p>
-
-<small data-time>
-Just now
-</small>
-
-</div>
-
-</div>
-
-
-<div class="feed-item">
-
-<div class="feed-avatar">
-<i class="fa-solid fa-circle"></i>
-</div>
-
-<div>
-
-<p>
-
-<strong>
-K Digital Hub is online
-</strong>
-
-<br>
-
-Available for new project discussions.
-
-</p>
-
-<small data-time>
-Just now
-</small>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="container live-layout">
+    <div>
+      <div class="eyebrow" style="color:#61e89b"><span class="dot"></span> Live updates</div>
+      <h2 style="color:white">A website that feels active.</h2>
+      <p class="lead">This live activity panel updates its timestamps automatically in the browser. When you later connect a database or CMS, it can become a genuine client/project feed.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Work With Us</a>
+      </div>
+    </div>
+    <div class="feed">
+      <div class="feed-top"><strong>Latest activity</strong><span class="badge">● LIVE</span></div>
+      <div class="feed-item"><div class="feed-avatar">✓</div><div><p><strong>New project enquiry received</strong><br>A business owner is interested in a professional website.</p><small data-time>Just now</small></div></div>
+      <div class="feed-item"><div class="feed-avatar">↗</div><div><p><strong>Portfolio updated</strong><br>New creative work has been added to the showcase.</p><small data-time>Just now</small></div></div>
+      <div class="feed-item"><div class="feed-avatar">✦</div><div><p><strong>Design in progress</strong><br>A new digital identity is currently being developed.</p><small data-time>Just now</small></div></div>
+      <div class="feed-item"><div class="feed-avatar">●</div><div><p><strong>K Digital Hub is online</strong><br>Available for new project discussions.</p><small data-time>Just now</small></div></div>
+    </div>
+  </div>
 </section>
-
-
-<!-- =========================
-     PROCESS
-========================= -->
 
 <section class="section">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-Our process
-</div>
-
-<h2>
-Simple. Clear. Professional.
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="process-grid">
-
-
-<div class="step">
-
-<b>
-01 — DISCOVER
-</b>
-
-<h3 style="margin:10px 0">
-Understand
-</h3>
-
-<p>
-We discuss your idea, audience,
-goals and requirements.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<b>
-02 — PLAN
-</b>
-
-<h3 style="margin:10px 0">
-Structure
-</h3>
-
-<p>
-We decide the content, visual
-direction, features and project scope.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<b>
-03 — CREATE
-</b>
-
-<h3 style="margin:10px 0">
-Build
-</h3>
-
-<p>
-Design and development turn
-the concept into a polished product.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<b>
-04 — LAUNCH
-</b>
-
-<h3 style="margin:10px 0">
-Deliver
-</h3>
-
-<p>
-We review the final work, make
-refinements and prepare it for launch.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Our process</div><h2>Simple. Clear. Professional.</h2></div></div>
+    <div class="process-grid">
+      <div class="step"><b>01 — DISCOVER</b><h3 style="margin:10px 0">Understand</h3><p>We discuss your idea, audience, goals and requirements.</p></div>
+      <div class="step"><b>02 — PLAN</b><h3 style="margin:10px 0">Structure</h3><p>We decide the content, visual direction, features and project scope.</p></div>
+      <div class="step"><b>03 — CREATE</b><h3 style="margin:10px 0">Build</h3><p>Design and development turn the concept into a polished product.</p></div>
+      <div class="step"><b>04 — LAUNCH</b><h3 style="margin:10px 0">Deliver</h3><p>We review the final work, make refinements and prepare it for launch.</p></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =========================
-     REVIEWS
-========================= -->
-
-<section class="section reviews">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-Client experience
-</div>
-
-<h2>
-Professional from first message to delivery.
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="review-grid">
-
-
-<article class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-“Outstanding service and highly professional delivery.”
-</p>
-
-<div class="reviewer">
-
-<div class="avatar">
-C
-</div>
-
-Client feedback
-
-</div>
-
-</article>
-
-
-<article class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-“Excellent branding work. Highly recommended.”
-</p>
-
-<div class="reviewer">
-
-<div class="avatar">
-C
-</div>
-
-Client feedback
-
-</div>
-
-</article>
-
-
-<article class="review">
-
-<div class="stars">
-★★★★☆
-</div>
-
-<p>
-“Fast communication and great attention to detail.”
-</p>
-
-<div class="reviewer">
-
-<div class="avatar">
-C
-</div>
-
-Client feedback
-
-</div>
-
-</article>
-
-</div>
-
-</div>
-
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Client experience</div><h2>Professional from first message to delivery.</h2></div></div>
+    <div class="review-grid">
+      <article class="review"><div class="stars">★★★★★</div><p>“Outstanding service and highly professional delivery.”</p><div class="reviewer"><div class="avatar">C</div> Client feedback</div></article>
+      <article class="review"><div class="stars">★★★★★</div><p>“Excellent branding work. Highly recommended.”</p><div class="reviewer"><div class="avatar">C</div> Client feedback</div></article>
+      <article class="review"><div class="stars">★★★★☆</div><p>“Fast communication and great attention to detail.”</p><div class="reviewer"><div class="avatar">C</div> Client feedback</div></article>
+    </div>
+  </div>
 </section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
 
 <section class="section contact" id="contact">
-
-<div class="container contact-grid">
-
-
-<div class="contact-box">
-
-<div
-class="eyebrow"
-style="color:#61e89b"
->
-
-Start a conversation
-
-</div>
-
-<h2 style="margin-top:12px">
-
-Have a project in mind?
-
-</h2>
-
-<p>
-
-Tell us what you want to build.
-Your message will open directly
-in WhatsApp so we can discuss
-the project quickly.
-
-</p>
-
-
-<div class="contact-links">
-
-
-<a
-href="https://wa.me/27752007054"
-target="_blank"
->
-
-<i class="fa-brands fa-whatsapp"></i>
-
-WhatsApp — 075 200 7054
-
-</a>
-
-
-<a
-href="https://www.facebook.com/share/19rgVvwt4y/"
-target="_blank"
->
-
-<i class="fa-brands fa-facebook-f"></i>
-
-Facebook
-
-</a>
-
-
-<a
-href="https://www.instagram.com/k.khutso2911?igsh=bzR5Y3Q0bDVvMWtq"
-target="_blank"
->
-
-<i class="fa-brands fa-instagram"></i>
-
-Instagram
-
-</a>
-
-
-</div>
-
-</div>
-
-
-<form id="contactForm">
-
-<h3 style="margin-bottom:20px">
-Project enquiry
-</h3>
-
-
-<label for="name">
-Your name
-</label>
-
-<input
-id="name"
-type="text"
-placeholder="e.g. John"
-required
->
-
-
-<label for="email">
-Email
-</label>
-
-<input
-id="email"
-type="email"
-placeholder="you@example.com"
-required
->
-
-
-<label for="service">
-What do you need?
-</label>
-
-<select id="service">
-
-<option>
-Website Development
-</option>
-
-<option>
-Logo / Branding
-</option>
-
-<option>
-Poster / Digital Design
-</option>
-
-<option>
-Typing / Documents
-</option>
-
-<option>
-Other Project
-</option>
-
-</select>
-
-
-<label for="message">
-Tell us about the project
-</label>
-
-<textarea
-id="message"
-rows="5"
-placeholder="What would you like us to build?"
-required
-></textarea>
-
-
-<button
-class="btn"
-type="submit"
->
-
-Send via WhatsApp →
-
-</button>
-
-</form>
-
-</div>
-
+  <div class="container contact-grid">
+    <div class="contact-box">
+      <div class="eyebrow" style="color:#61e89b">Start a conversation</div>
+      <h2 style="margin-top:12px">Have a project in mind?</h2>
+      <p>Tell us what you want to build. Your message will open directly in WhatsApp so we can discuss the project quickly.</p>
+      <div class="contact-links">
+        <a href="https://wa.me/27752007054" target="_blank">💬 WhatsApp — 075 200 7054</a>
+        <a href="https://www.facebook.com/share/19rgVvwt4y/" target="_blank">f Facebook</a>
+        <a href="https://www.instagram.com/k.khutso2911?igsh=bzR5Y3Q0bDVvMWtq" target="_blank">◎ Instagram</a>
+      </div>
+    </div>
+    <form id="contactForm">
+      <h3 style="margin-bottom:20px">Project enquiry</h3>
+      <label for="name">Your name</label>
+      <input id="name" type="text" placeholder="e.g. John" required>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+      <label for="service">What do you need?</label>
+      <select id="service">
+        <option>Website Development</option>
+        <option>Logo / Branding</option>
+        <option>Poster / Digital Design</option>
+        <option>Typing / Documents</option>
+        <option>Other Project</option>
+      </select>
+      <label for="message">Tell us about the project</label>
+      <textarea id="message" rows="5" placeholder="What would you like us to build?" required></textarea>
+      <button class="btn" type="submit">Send Message →</button>
+    </form>
+  </div>
 </section>
-
 </main>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
-
-<div class="container footer-grid">
-
-<div>
-
-<strong>
-K Digital Hub
-</strong>
-
-<br>
-
-<span>
-Professional digital solutions for modern businesses.
-</span>
-
-<br>
-
-<span>
-Polokwane • Mankweng 0727 • Limpopo • South Africa
-</span>
-
-</div>
-
-
-<div class="socials">
-
-<a href="#home">
-Home
-</a>
-
-<a href="#work">
-Portfolio
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
-</div>
-
-</div>
-
-
-<div
-class="container"
-style="margin-top:25px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;font-size:.8rem"
->
-
-© 2026 K Digital Hub. All rights reserved.
-
-</div>
-
+  <div class="container footer-grid">
+    <div><strong>K Digital Hub</strong><br><span>Professional digital solutions for modern businesses.</span><br><span>Polokwane • Mankweng 0727 • Limpopo • South Africa</span></div>
+    <div class="socials">
+      <a href="#home">Home</a><a href="#work">Portfolio</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="container" style="margin-top:25px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;font-size:.8rem">© 2026 K Digital Hub. All rights reserved.</div>
 </footer>
 
-
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
-
-<a
-class="whatsapp"
-href="https://wa.me/27752007054"
-target="_blank"
-aria-label="Chat on WhatsApp"
->
-
-<i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-
-<div
-class="toast"
-id="toast"
->
-
-Message prepared — opening WhatsApp…
-
-</div>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<a class="whatsapp" href="https://wa.me/27752007054" target="_blank" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<div class="toast" id="toast">Message prepared — opening WhatsApp…</div>
 
 <script>
+const menu=document.getElementById('menu');
+const nav=document.getElementById('navlinks');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 
-const menu =
-document.getElementById('menu');
-
-const nav =
-document.getElementById('navlinks');
-
-
-menu.addEventListener(
-'click',
-()=>{
-  nav.classList.toggle('open');
-}
-);
-
-
-document
-.querySelectorAll('.navlinks a')
-.forEach(
-a =>
-a.addEventListener(
-'click',
-()=>{
-  nav.classList.remove('open');
-}
-)
-);
-
-
-const timeEls =
-document.querySelectorAll('[data-time]');
-
-
+const timeEls=document.querySelectorAll('[data-time]');
 function updateFeedTime(){
-
-  const now =
-  new Date();
-
-  timeEls.forEach(
-  (el,i)=>{
-
-    if(i===0){
-
-      el.textContent =
-      'Just now';
-
-    }
-
-    else if(i===1){
-
-      el.textContent =
-      'A few minutes ago';
-
-    }
-
-    else if(i===2){
-
-      el.textContent =
-      'Earlier today';
-
-    }
-
-    else{
-
-      el.textContent =
-      now.toLocaleTimeString(
-        [],
-        {
-          hour:'2-digit',
-          minute:'2-digit'
-        }
-      );
-
-    }
-
+  const now=new Date();
+  timeEls.forEach((el,i)=>{
+    if(i===0) el.textContent='Just now';
+    else if(i===1) el.textContent='A few minutes ago';
+    else if(i===2) el.textContent='Earlier today';
+    else el.textContent=now.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
   });
-
 }
-
-
 updateFeedTime();
+setInterval(updateFeedTime,60000);
 
-setInterval(
-updateFeedTime,
-60000
-);
-
-
-document
-.getElementById('contactForm')
-.addEventListener(
-'submit',
-function(e){
+document.getElementById('contactForm').addEventListener('submit', async function(e){
 
   e.preventDefault();
 
-  const name =
-  document
-  .getElementById('name')
-  .value
-  .trim();
+  const form = this;
+  const button = form.querySelector('button[type="submit"]');
+  const toast = document.getElementById('toast');
 
-  const email =
-  document
-  .getElementById('email')
-  .value
-  .trim();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value.trim();
 
-  const service =
-  document
-  .getElementById('service')
-  .value;
+  button.disabled = true;
+  button.textContent = 'Sending...';
 
-  const message =
-  document
-  .getElementById('message')
-  .value
-  .trim();
+  try {
 
-
-  const text =
-
-  `Hello K Digital Hub!
-
-Name: ${name}
-
-Email: ${email}
-
-Service: ${service}
-
-Project: ${message}`;
-
-
-  document
-  .getElementById('toast')
-  .classList
-  .add('show');
-
-
-  setTimeout(
-  () => {
-
-    window.open(
-      `https://wa.me/27752007054?text=${encodeURIComponent(text)}`,
-      '_blank'
+    const response = await fetch(
+      'https://formsubmit.co/ajax/YOUR-EMAIL@example.com',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          service: service,
+          message: message,
+          _subject: 'New K Digital Hub Project Enquiry',
+          _captcha: 'false'
+        })
+      }
     );
 
-  },
-  350
-  );
+    if (!response.ok) throw new Error('Message could not be sent');
 
+    toast.textContent = 'Message sent successfully ✓';
+    toast.classList.add('show');
+    form.reset();
 
-  setTimeout(
-  () => {
+    setTimeout(() => toast.classList.remove('show'), 3500);
 
-    document
-    .getElementById('toast')
-    .classList
-    .remove('show');
+  } catch (error) {
 
-  },
-  2500
-  );
+    toast.textContent = 'Something went wrong. Please try again.';
+    toast.classList.add('show');
+
+    setTimeout(() => toast.classList.remove('show'), 3500);
+
+  } finally {
+
+    button.disabled = false;
+    button.textContent = 'Send Message →';
+
+  }
 
 });
-
 </script>
-
 </body>
 </html>
